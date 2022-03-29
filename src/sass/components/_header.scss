@@ -1,0 +1,38 @@
+@use '../mixin' as *;
+@use '../variable' as *;
+
+
+.header {
+    padding-top: 50px;
+    &-container {
+        @include flex(center,space-between)
+    }
+    &-auth{
+        @include flex(center,none);
+        gap: 0 30px;
+        text-transform: capitalize;
+        
+    }    
+    &-sigin{
+        font-weight: 500;
+        color: $heading-color;
+        text-decoration: none;
+    }
+    &-sigup{
+        padding: 13px 45px;
+        border-radius: 100rem;
+        color: $primary-color;
+        text-decoration: none;
+        font-weight: 500;
+        border: 1px solid $primary-color;
+    }
+}
+.menu{
+    list-style: none;
+    @include flex(center, unset);
+    gap : 0 40px;
+    &-link
+    {
+        color: inherit;
+    }    
+}
